@@ -1,6 +1,6 @@
 ﻿namespace sql_form
 {
-    partial class Form1
+    partial class SQLEditor
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -130,10 +130,11 @@
             this.lab_Age.TabIndex = 7;
             this.lab_Age.Text = "Age";
             // 
-            // Form1
+            // SQLEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lab_Age);
             this.Controls.Add(this.lab_name);
@@ -143,7 +144,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.start);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "SQLEditor";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

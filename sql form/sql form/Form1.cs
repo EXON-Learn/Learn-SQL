@@ -14,9 +14,9 @@ using System.Net.Http.Headers;
 
 namespace sql_form
 {
-    public partial class Form1 : Form
+    public partial class SQLEditor : Form
     {
-        public Form1()
+        public SQLEditor()
         {
             InitializeComponent();
         }
@@ -108,6 +108,7 @@ namespace sql_form
             }
 
             connection.Close();
+            LookUp();
         }
 
         private void but_add_Click(object sender, EventArgs e)
@@ -122,6 +123,7 @@ namespace sql_form
 
 
             connection.Close();
+            LookUp();
         }
     }
 }
