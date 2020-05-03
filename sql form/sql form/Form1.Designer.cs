@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.start = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start = new System.Windows.Forms.Button();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_age = new System.Windows.Forms.TextBox();
             this.but_delete = new System.Windows.Forms.Button();
@@ -52,16 +52,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // start
-            // 
-            this.start.Location = new System.Drawing.Point(258, 12);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(75, 23);
-            this.start.TabIndex = 1;
-            this.start.Text = "조회";
-            this.start.UseVisualStyleBackColor = true;
-            this.start.Click += new System.EventHandler(this.start_Click_1);
-            // 
             // name
             // 
             this.name.HeaderText = "name";
@@ -72,23 +62,33 @@
             this.age.HeaderText = "age";
             this.age.Name = "age";
             // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(258, 12);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(75, 23);
+            this.start.TabIndex = 1;
+            this.start.Text = "조회";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click_1);
+            // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(396, 107);
+            this.txt_name.Location = new System.Drawing.Point(258, 41);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(100, 21);
             this.txt_name.TabIndex = 2;
             // 
             // txt_age
             // 
-            this.txt_age.Location = new System.Drawing.Point(502, 107);
+            this.txt_age.Location = new System.Drawing.Point(364, 41);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(100, 21);
             this.txt_age.TabIndex = 3;
             // 
             // but_delete
             // 
-            this.but_delete.Location = new System.Drawing.Point(461, 134);
+            this.but_delete.Location = new System.Drawing.Point(258, 97);
             this.but_delete.Name = "but_delete";
             this.but_delete.Size = new System.Drawing.Size(75, 23);
             this.but_delete.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             // but_add
             // 
-            this.but_add.Location = new System.Drawing.Point(461, 163);
+            this.but_add.Location = new System.Drawing.Point(258, 68);
             this.but_add.Name = "but_add";
             this.but_add.Size = new System.Drawing.Size(75, 23);
             this.but_add.TabIndex = 5;

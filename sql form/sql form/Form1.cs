@@ -21,12 +21,10 @@ namespace sql_form
             InitializeComponent();
         }
 
-        public static string insertQuery;
-        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=data1;Uid=root;Pwd=1exonhappy1234;");
+        static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=data1;Uid=root;Pwd=1exonhappy1234;");
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            connection.Open();
         }
 
 
@@ -37,14 +35,14 @@ namespace sql_form
 
         private void start_Click_1(object sender, EventArgs e)
         {
-
-
             MySqlCommand query = connection.CreateCommand();
             query.CommandText = "SELECT *";
-            query.CommandText += "FROM data1.new_table";
+            query.CommandText += "FROM new_table";
 
             try
             {
+                connection.Open();
+
                 MySqlDataReader reader = query.ExecuteReader();
                 dataGridView1.Rows.Clear();
 
@@ -57,20 +55,71 @@ namespace sql_form
             }
             catch (Exception Ex)
             {
-                Console.WriteLine(Ex.ToString());
-                return;
+                MessageBox.Show(Ex.Message);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
         private void but_delete_Click(object sender, EventArgs e)
         {
-            insertQuery = $"DELETE FROM data1.new_table WHERE name = {txt_name.Text} AND age = {txt_age.Text};";
+            string insertQuery = $"DELETE FROM data1.new_table WHERE name = \"{txt_name.Text}\" AND age = {txt_age.Text};";
+
+
+            connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+            try//예외 처리
+            {
+                // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("정상적으로 갔다");
+                }
+                else
+                {
+                    MessageBox.Show("비정상 이당");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            connection.Close();
         }
 
         private void but_add_Click(object sender, EventArgs e)
         {
 
+            string insertQuery = "INSERT INTO data1.new_table(name,age) VALUES('" + txt_name.Text + "'," + txt_age.Text + ")";
+
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+            try//예외 처리
+            {
+                // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("정상적으로 갔다");
+                }
+                else
+                {
+                    MessageBox.Show("비정상 이당");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            connection.Close();
         }
     }
 }
