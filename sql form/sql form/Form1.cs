@@ -76,11 +76,11 @@ namespace sql_form
                 // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("정상적으로 갔다");
+                    MessageBox.Show("삭제됬습니다");
                 }
                 else
                 {
-                    MessageBox.Show("비정상 이당");
+                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요");
                 }
             }
             catch (Exception ex)
@@ -106,11 +106,11 @@ namespace sql_form
                 // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("정상적으로 갔다");
+                    MessageBox.Show("추가됬습니다");
                 }
                 else
                 {
-                    MessageBox.Show("비정상 이당");
+                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요");
                 }
             }
             catch (Exception ex)
