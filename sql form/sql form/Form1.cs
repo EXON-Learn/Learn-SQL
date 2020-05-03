@@ -25,6 +25,7 @@ namespace sql_form
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LookUp();
         }
 
 
@@ -33,7 +34,7 @@ namespace sql_form
 
         }
 
-        private void start_Click_1(object sender, EventArgs e)
+        private void LookUp()
         {
             MySqlCommand query = connection.CreateCommand();
             query.CommandText = "SELECT *";
@@ -63,31 +64,48 @@ namespace sql_form
             }
         }
 
-        private void but_delete_Click(object sender, EventArgs e)
+        private void TryMessage(MySqlCommand command)
         {
-            string insertQuery = $"DELETE FROM data1.new_table WHERE name = \"{txt_name.Text}\" AND age = {txt_age.Text};";
-
-
-            connection.Open();
-            MySqlCommand command = new MySqlCommand(insertQuery, connection);
-
-            try//예외 처리
+            try //예외 처리
             {
                 // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("삭제됬습니다");
+                    MessageBox.Show("정상적으로 처리 됬습니다.");
                 }
                 else
                 {
-                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요");
+                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요.");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void start_Click_1(object sender, EventArgs e)
+        {
+            LookUp();
+        }
+
+        private void but_delete_Click(object sender, EventArgs e)
+        {
+            if (txt_name.Text == "all" && txt_age.Text == "all")
+            {
+                string insertQuery = $"DELETE FROM data1.new_table";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
+            }
+            else
+            {
+                string insertQuery = $"DELETE FROM data1.new_table WHERE name = \"{txt_name.Text}\" AND age = {txt_age.Text};";
+
+
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(insertQuery, connection);
+                TryMessage(command);
+            }
 
             connection.Close();
         }
@@ -100,23 +118,7 @@ namespace sql_form
 
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
-
-            try//예외 처리
-            {
-                // 만약에 내가처리한 Mysql에 정상적으로 들어갔다면 메세지를 보여주라는 뜻이다
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("추가됬습니다");
-                }
-                else
-                {
-                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            TryMessage(command);
 
 
             connection.Close();

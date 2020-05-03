@@ -36,6 +36,8 @@
             this.txt_age = new System.Windows.Forms.TextBox();
             this.but_delete = new System.Windows.Forms.Button();
             this.but_add = new System.Windows.Forms.Button();
+            this.lab_name = new System.Windows.Forms.Label();
+            this.lab_Age = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,9 +66,9 @@
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(258, 12);
+            this.start.Location = new System.Drawing.Point(12, 386);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(75, 23);
+            this.start.Size = new System.Drawing.Size(240, 52);
             this.start.TabIndex = 1;
             this.start.Text = "조회";
             this.start.UseVisualStyleBackColor = true;
@@ -74,23 +76,23 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(258, 41);
+            this.txt_name.Location = new System.Drawing.Point(322, 338);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(100, 21);
             this.txt_name.TabIndex = 2;
             // 
             // txt_age
             // 
-            this.txt_age.Location = new System.Drawing.Point(364, 41);
+            this.txt_age.Location = new System.Drawing.Point(477, 338);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(100, 21);
             this.txt_age.TabIndex = 3;
             // 
             // but_delete
             // 
-            this.but_delete.Location = new System.Drawing.Point(339, 68);
+            this.but_delete.Location = new System.Drawing.Point(288, 386);
             this.but_delete.Name = "but_delete";
-            this.but_delete.Size = new System.Drawing.Size(75, 23);
+            this.but_delete.Size = new System.Drawing.Size(96, 52);
             this.but_delete.TabIndex = 4;
             this.but_delete.Text = "삭제";
             this.but_delete.UseVisualStyleBackColor = true;
@@ -98,19 +100,43 @@
             // 
             // but_add
             // 
-            this.but_add.Location = new System.Drawing.Point(258, 68);
+            this.but_add.Location = new System.Drawing.Point(390, 386);
             this.but_add.Name = "but_add";
-            this.but_add.Size = new System.Drawing.Size(75, 23);
+            this.but_add.Size = new System.Drawing.Size(92, 52);
             this.but_add.TabIndex = 5;
             this.but_add.Text = "추가";
             this.but_add.UseVisualStyleBackColor = true;
             this.but_add.Click += new System.EventHandler(this.but_add_Click);
+            // 
+            // lab_name
+            // 
+            this.lab_name.AutoSize = true;
+            this.lab_name.BackColor = System.Drawing.Color.Transparent;
+            this.lab_name.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lab_name.Location = new System.Drawing.Point(258, 338);
+            this.lab_name.Name = "lab_name";
+            this.lab_name.Size = new System.Drawing.Size(58, 21);
+            this.lab_name.TabIndex = 6;
+            this.lab_name.Text = "Name";
+            // 
+            // lab_Age
+            // 
+            this.lab_Age.AutoSize = true;
+            this.lab_Age.BackColor = System.Drawing.Color.Transparent;
+            this.lab_Age.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lab_Age.Location = new System.Drawing.Point(428, 338);
+            this.lab_Age.Name = "lab_Age";
+            this.lab_Age.Size = new System.Drawing.Size(43, 21);
+            this.lab_Age.TabIndex = 7;
+            this.lab_Age.Text = "Age";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lab_Age);
+            this.Controls.Add(this.lab_name);
             this.Controls.Add(this.but_add);
             this.Controls.Add(this.but_delete);
             this.Controls.Add(this.txt_age);
@@ -136,6 +162,8 @@
         private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.Button but_delete;
         private System.Windows.Forms.Button but_add;
+        private System.Windows.Forms.Label lab_name;
+        private System.Windows.Forms.Label lab_Age;
     }
 }
 
