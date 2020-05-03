@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sql form", "sql form\sql form.csproj", "{6C3542F4-097C-4C8E-BFBE-2EC3668CD1F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C3542F4-097C-4C8E-BFBE-2EC3668CD1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3542F4-097C-4C8E-BFBE-2EC3668CD1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3542F4-097C-4C8E-BFBE-2EC3668CD1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3542F4-097C-4C8E-BFBE-2EC3668CD1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E954E73-89AC-4196-917A-2F7DE5807DD5}
+	EndGlobalSection
+EndGlobal
