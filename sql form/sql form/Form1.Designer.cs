@@ -66,12 +66,18 @@
             // 
             // start
             // 
+            this.start.BackColor = System.Drawing.SystemColors.Control;
+            this.start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.start.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.start.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.start.Font = new System.Drawing.Font("Zexo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start.ForeColor = System.Drawing.Color.Black;
             this.start.Location = new System.Drawing.Point(12, 386);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(240, 52);
+            this.start.Size = new System.Drawing.Size(127, 52);
             this.start.TabIndex = 1;
-            this.start.Text = "조회";
-            this.start.UseVisualStyleBackColor = true;
+            this.start.Text = "리로드";
+            this.start.UseVisualStyleBackColor = false;
             this.start.Click += new System.EventHandler(this.start_Click_1);
             // 
             // txt_name
@@ -90,6 +96,7 @@
             // 
             // but_delete
             // 
+            this.but_delete.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.but_delete.Location = new System.Drawing.Point(288, 386);
             this.but_delete.Name = "but_delete";
             this.but_delete.Size = new System.Drawing.Size(96, 52);
@@ -100,6 +107,7 @@
             // 
             // but_add
             // 
+            this.but_add.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.but_add.Location = new System.Drawing.Point(390, 386);
             this.but_add.Name = "but_add";
             this.but_add.Size = new System.Drawing.Size(92, 52);
