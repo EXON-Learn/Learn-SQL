@@ -32,6 +32,10 @@
             this.start = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_age = new System.Windows.Forms.TextBox();
+            this.but_delete = new System.Windows.Forms.Button();
+            this.but_add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,11 +72,49 @@
             this.age.HeaderText = "age";
             this.age.Name = "age";
             // 
+            // txt_name
+            // 
+            this.txt_name.Location = new System.Drawing.Point(396, 107);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(100, 21);
+            this.txt_name.TabIndex = 2;
+            // 
+            // txt_age
+            // 
+            this.txt_age.Location = new System.Drawing.Point(502, 107);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(100, 21);
+            this.txt_age.TabIndex = 3;
+            // 
+            // but_delete
+            // 
+            this.but_delete.Location = new System.Drawing.Point(461, 134);
+            this.but_delete.Name = "but_delete";
+            this.but_delete.Size = new System.Drawing.Size(75, 23);
+            this.but_delete.TabIndex = 4;
+            this.but_delete.Text = "삭제";
+            this.but_delete.UseVisualStyleBackColor = true;
+            this.but_delete.Click += new System.EventHandler(this.but_delete_Click);
+            // 
+            // but_add
+            // 
+            this.but_add.Location = new System.Drawing.Point(461, 163);
+            this.but_add.Name = "but_add";
+            this.but_add.Size = new System.Drawing.Size(75, 23);
+            this.but_add.TabIndex = 5;
+            this.but_add.Text = "추가";
+            this.but_add.UseVisualStyleBackColor = true;
+            this.but_add.Click += new System.EventHandler(this.but_add_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.but_add);
+            this.Controls.Add(this.but_delete);
+            this.Controls.Add(this.txt_age);
+            this.Controls.Add(this.txt_name);
             this.Controls.Add(this.start);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -80,6 +122,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,6 +132,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn age;
         private System.Windows.Forms.Button start;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_age;
+        private System.Windows.Forms.Button but_delete;
+        private System.Windows.Forms.Button but_add;
     }
 }
 

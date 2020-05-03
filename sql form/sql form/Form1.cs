@@ -21,9 +21,12 @@ namespace sql_form
             InitializeComponent();
         }
 
+        public static string insertQuery;
+        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=data1;Uid=root;Pwd=1exonhappy1234;");
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            connection.Open();
         }
 
 
@@ -34,8 +37,8 @@ namespace sql_form
 
         private void start_Click_1(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Database=data1;Uid=root;Pwd=1exonhappy1234;");
-            connection.Open();
+
+
             MySqlCommand query = connection.CreateCommand();
             query.CommandText = "SELECT *";
             query.CommandText += "FROM data1.new_table";
@@ -57,10 +60,17 @@ namespace sql_form
                 Console.WriteLine(Ex.ToString());
                 return;
             }
-            finally
-            {
-                connection.Close();
-            }
+        }
+
+        private void but_delete_Click(object sender, EventArgs e)
+        {
+            insertQuery = $"DELETE FROM data1.new_table WHERE name = {txt_name.Text} AND age = {txt_age.Text};";
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+        }
+
+        private void but_add_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
