@@ -75,7 +75,7 @@ namespace sql_form
                 }
                 else
                 {
-                    MessageBox.Show("오류가 났습니다. \n 다시 한번 시도해주세요.");
+                    MessageBox.Show("오류가 났습니다. \n다시 한번 시도해주세요.");
                 }
             }
             catch (Exception ex)

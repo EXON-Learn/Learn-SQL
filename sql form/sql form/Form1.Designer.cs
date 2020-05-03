@@ -153,7 +153,7 @@
             this.Controls.Add(this.start);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SQLEditor";
-            this.Text = "Form1";
+            this.Text = "SQL Editor";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
