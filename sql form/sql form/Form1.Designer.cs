@@ -82,14 +82,14 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(322, 338);
+            this.txt_name.Location = new System.Drawing.Point(258, 78);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(100, 21);
             this.txt_name.TabIndex = 2;
             // 
             // txt_age
             // 
-            this.txt_age.Location = new System.Drawing.Point(477, 338);
+            this.txt_age.Location = new System.Drawing.Point(403, 78);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(100, 21);
             this.txt_age.TabIndex = 3;
@@ -97,7 +97,7 @@
             // but_delete
             // 
             this.but_delete.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.but_delete.Location = new System.Drawing.Point(288, 386);
+            this.but_delete.Location = new System.Drawing.Point(270, 386);
             this.but_delete.Name = "but_delete";
             this.but_delete.Size = new System.Drawing.Size(96, 52);
             this.but_delete.TabIndex = 4;
@@ -108,7 +108,7 @@
             // but_add
             // 
             this.but_add.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.but_add.Location = new System.Drawing.Point(390, 386);
+            this.but_add.Location = new System.Drawing.Point(372, 386);
             this.but_add.Name = "but_add";
             this.but_add.Size = new System.Drawing.Size(92, 52);
             this.but_add.TabIndex = 5;
@@ -121,7 +121,7 @@
             this.lab_name.AutoSize = true;
             this.lab_name.BackColor = System.Drawing.Color.Transparent;
             this.lab_name.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lab_name.Location = new System.Drawing.Point(258, 338);
+            this.lab_name.Location = new System.Drawing.Point(258, 54);
             this.lab_name.Name = "lab_name";
             this.lab_name.Size = new System.Drawing.Size(58, 21);
             this.lab_name.TabIndex = 6;
@@ -132,7 +132,7 @@
             this.lab_Age.AutoSize = true;
             this.lab_Age.BackColor = System.Drawing.Color.Transparent;
             this.lab_Age.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lab_Age.Location = new System.Drawing.Point(428, 338);
+            this.lab_Age.Location = new System.Drawing.Point(399, 54);
             this.lab_Age.Name = "lab_Age";
             this.lab_Age.Size = new System.Drawing.Size(43, 21);
             this.lab_Age.TabIndex = 7;
