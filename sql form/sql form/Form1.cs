@@ -127,13 +127,12 @@ namespace sql_form
 
         private void but_edit_Click(object sender, EventArgs e)
         {
-            string insertQuery = $"UPDATE data1.new_table SET (name, age) = \"{txt_willName.Text}\", {txt_willAge.Text} " +
+            string insertQuery = $"UPDATE data1.new_table SET (name, age) = (\"{txt_willName.Text}\", {txt_willAge.Text})" +
                 $"WHERE name = \"{txt_editName.Text}\" AND age = {txt_editAge.Text};";
             connection.Open();
 
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
             TryMessage(command);
-
 
             connection.Close();
             LookUp();
