@@ -37,7 +37,7 @@ insert into person(name, age, gender, grade) values('YoWu', '24', '남', '3'); <
 select 테이블명 from 테이블명; : **일반조회** <br>
 select 조회할 컬럼명 from 테이블명 where 조건컬럼명 = 조건데이터; : **조건조회** <br>
 select 조회할 컬럼명 from 테이블명 where 조건 and 조건; : **다중조건조회** <br>
-<br>
+<br> 
 
 ### 예 <br>
 select * from person; : person 테이블의 모든 데이터 조회 <br>
