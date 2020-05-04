@@ -1,5 +1,5 @@
 # Learn-SQL
-<img src = "https://img.shields.io/badge/SQL-Learn-green">  <img src = "https://img.shields.io/badge/MySQL-Learn-blue">  <img src = "https://img.shields.io/badge/C#-With-green"> 
+<img src = "https://img.shields.io/badge/SQL-Learn-green">  <img src = "https://img.shields.io/badge/MySQL-Learn-blue">  <img src = "https://img.shields.io/badge/C%30-With-green"> 
 SQL 배우기
 
 ## Command
