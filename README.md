@@ -45,7 +45,7 @@ select name from person where gender='남'; : person의 데이터 중 gender의 
 select name, age from person where gender='남' and age>20;: person의 데이터 중 gender의 값이 '남'이면서 age가 20이상 데이터의 name, age 값 조회<br>
 <br>
 
-## delete <br>
+## delete : 데이터 삭제<br>
 MySQL에서는 DELETE 문을 사용하여 테이블의 레코드를 삭제할 수 있습니다. <br>
 
 ### 형식 <br>
