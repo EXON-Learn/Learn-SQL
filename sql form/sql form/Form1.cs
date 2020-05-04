@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-using System.Net.Http.Headers;
-
 namespace sql_form
 {
     public partial class SQLEditor : Form
@@ -26,6 +24,7 @@ namespace sql_form
         private void Form1_Load(object sender, EventArgs e)
         {
             LookUp();
+            
         }
 
 
@@ -118,6 +117,20 @@ namespace sql_form
 
 
             connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+            TryMessage(command);
+
+
+            connection.Close();
+            LookUp();
+        }
+
+        private void but_edit_Click(object sender, EventArgs e)
+        {
+            string insertQuery = $"UPDATE data1.new_table SET (name, age) = \"{txt_willName.Text}\", {txt_willAge.Text} " +
+                $"WHERE name = \"{txt_editName.Text}\" AND age = {txt_editAge.Text};";
+            connection.Open();
+
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
             TryMessage(command);
 
