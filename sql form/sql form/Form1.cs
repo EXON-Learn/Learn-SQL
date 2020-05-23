@@ -18,8 +18,10 @@ namespace sql_form
         {
             InitializeComponent();
         }
-
-        static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=data1;Uid=root;Pwd=1exonhappy1234;");
+        static string databaseName = "data1";
+        static string tableName = "data1.new_table";
+      
+        static MySqlConnection connection = new MySqlConnection($"Server=localhost;Database={databaseName};Uid=root;Pwd=1exonhappy1234;");
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -37,7 +39,7 @@ namespace sql_form
         {
             MySqlCommand query = connection.CreateCommand();
             query.CommandText = "SELECT *";
-            query.CommandText += "FROM new_table";
+            query.CommandText += $"FROM {tableName}";
 
             try
             {
@@ -92,13 +94,13 @@ namespace sql_form
         {
             if (txt_name.Text == "all" && txt_age.Text == "all")
             {
-                string insertQuery = $"DELETE FROM data1.new_table";
+                string insertQuery = $"DELETE FROM {tableName}";
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(insertQuery, connection);
             }
             else
             {
-                string insertQuery = $"DELETE FROM data1.new_table WHERE name = \"{txt_name.Text}\" AND age = {txt_age.Text};";
+                string insertQuery = $"DELETE FROM {tableName} WHERE name = \"{txt_name.Text}\" AND age = {txt_age.Text};";
 
 
                 connection.Open();
