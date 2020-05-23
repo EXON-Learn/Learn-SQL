@@ -115,7 +115,7 @@ namespace sql_form
         private void but_add_Click(object sender, EventArgs e)
         {
 
-            string insertQuery = "INSERT INTO data1.new_table(name,age) VALUES('" + txt_name.Text + "'," + txt_age.Text + ")";
+            string insertQuery = $"INSERT INTO {tableName}(name,age) VALUES('{ txt_name.Text} ',{txt_age.Text} )";
 
 
             connection.Open();
